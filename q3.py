@@ -62,7 +62,7 @@ Discuss the exploratory data analysis steps you have conducted including detecti
 # The dataset used is "pkrc.csv"
 sns.set(rc = {"figure.figsize" : (50, 25)}) 
 sns.boxplot(x = "state", y = "beds", data = pkrc)
-
+st.pyplot()
 pkrc.isna().sum()
 
 """#### (ii) 
@@ -82,6 +82,7 @@ for i, j in enumerate(eachCS):
   fig, ax = plt.subplots(figsize = [16,12]) 
   lineAState = sns.lineplot(x = "date", y = "cases_new", ax = ax, data = j, legend = "brief", label = states[i]) 
   plt.show()
+  st.pyplot()
 
 """Based on the graphs shown above, the states that exhibit strong correlation with Pahang is Kelantan, while the state that exihibit strong correlation with Johor is Terengganu. This can be observed from the trend of the daily cases graph. The peak of the line graph indicates an outbreak going on in the state, and the state that have a strong correlation also has a similar trend line.
 
