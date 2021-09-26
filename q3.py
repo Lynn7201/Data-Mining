@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns 
 import numpy as np 
 import datetime
+st.set_option('deprecation.showPyplotGlobalUse', False)
 
 st.markdown("# Cases and Testing")
 import pandas as pd 
@@ -177,8 +178,7 @@ for i in sState:
 
 for i, j in enumerate(bScore): 
   st.write("\nState:", selectedState[i]) 
-  st.write(j.nlarge
-           (3, ["Score"])) 
+  st.write(j.nlarge(3, ["Score"])) 
   borutaPlot = sns.catplot(x = "Score", y = "Features", data = j, kind = "bar", height = 14, aspect = 1.9, palette = 'coolwarm') 
   plt.title("Boruta all features for " + selectedState[i]) 
   st.pyplot()
