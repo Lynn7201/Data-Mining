@@ -11,7 +11,7 @@ CMalaysia = pd.read_csv('cases_malaysia.csv')
 CState    = pd.read_csv('cases_state.csv')
 clusters  = pd.read_csv('clusters.csv') 
 TMalaysia = pd.read_csv('tests_malaysia.csv') 
-TState    = pd.read_csv('tests_state.csvv')
+TState    = pd.read_csv('tests_state.csv')
 
 st.markdown("# Healthcare")
 pkrc          = pd.read_csv('pkrc.csv') 
