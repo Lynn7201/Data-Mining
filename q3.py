@@ -228,8 +228,8 @@ for (X_train, X_test, y_train, y_test) in regTrainSet:
 for i, (X_train, X_test, y_train, y_test) in enumerate(regTrainSet): 
   st.write("\nState:", selectedState[i]) 
   rrf = regRF[i] 
-  st.write("Accuracy of Random Forest on training set: {:.3f}".format(rrf.score(X_train, y_train))) 
-  st.write("Accuracy of Random Forest on test set: {:.3f}".format(rrf.score(X_test, y_test))) 
+  st.table("Accuracy of Random Forest on training set: {:.3f}".format(rrf.score(X_train, y_train))) 
+  st.table("Accuracy of Random Forest on test set: {:.3f}".format(rrf.score(X_test, y_test))) 
   display(regRFDiff[i])
 
 rrfResult = pd.DataFrame(columns = ["State", "Training Set Accuracy", "Test Set Accuracy"]) 
@@ -259,8 +259,8 @@ for (X_train, X_test, y_train, y_test) in regTrainSet:
 for i, (X_train, X_test, y_train, y_test) in enumerate(regTrainSet): 
   print("\nState:", selectedState[i]) 
   rdt = regDT[i] 
-  st.write("Accuracy of Decision Tree on training set: {:.3f}".format(rdt.score(X_train, y_train))) 
-  st.write("Accuracy of Decision Tree on test set: {:.3f}".format(rdt.score(X_test, y_test))) 
+  st.table("Accuracy of Decision Tree on training set: {:.3f}".format(rdt.score(X_train, y_train))) 
+  st.table("Accuracy of Decision Tree on test set: {:.3f}".format(rdt.score(X_test, y_test))) 
   display(regDTDiff[i])
 
 rdtResult = pd.DataFrame(columns = ["State", "Training Set Accuracy", "Test Set Accuracy"]) 
@@ -307,9 +307,9 @@ for (X_train, X_test, y_train, y_test) in classTrainSet:
 for i, (X_train, X_test, y_train, y_test) in enumerate(classTrainSet): 
   print("\nState:", selectedState[i]) 
   crf = classRF[i] 
-  st.write("Accuracy of Random Forest on training set: {:.3f}".format(crf.score(X_train, y_train))) 
-  st.write("Accuracy of Random Forest on test set: {:.3f}".format(crf.score(X_test, y_test))) 
-  st.write('Accuracy score of Random Forest: {:.3f}'.format(scoreRF[i])) 
+  st.table("Accuracy of Random Forest on training set: {:.3f}".format(crf.score(X_train, y_train))) 
+  st.table("Accuracy of Random Forest on test set: {:.3f}".format(crf.score(X_test, y_test))) 
+  st.table('Accuracy score of Random Forest: {:.3f}'.format(scoreRF[i])) 
   display(classRFDiff[i])
 
 crfResult = pd.DataFrame(columns = ["State", "Training Set Accuracy", "Test Set Accuracy", "Accuracy Score"]) 
@@ -343,9 +343,9 @@ for (X_train, X_test, y_train, y_test) in classTrainSet:
 for i, (X_train, X_test, y_train, y_test) in enumerate(classTrainSet): 
   st.write("\nState:", selectedState[i]) 
   cdt = classDT[i] 
-  st.write("Accuracy of Decision Tree on training set: {:.3f}".format(cdt.score(X_train, y_train))) 
-  st.write("Accuracy of Decision Tree on test set: {:.3f}".format(cdt.score(X_test, y_test))) 
-  st.write('Accuracy score of Decision Tree: {:.3f}'.format(scoreDT[i])) 
+  st.table("Accuracy of Decision Tree on training set: {:.3f}".format(cdt.score(X_train, y_train))) 
+  st.table("Accuracy of Decision Tree on test set: {:.3f}".format(cdt.score(X_test, y_test))) 
+  st.table('Accuracy score of Decision Tree: {:.3f}'.format(scoreDT[i])) 
   display(classDTDiff[i])
 
 cdtResult = pd.DataFrame(columns = ["State", "Training Set Accuracy", "Test Set Accuracy", "Accuracy Score"]) 
