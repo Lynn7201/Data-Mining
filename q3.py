@@ -1,4 +1,4 @@
-from datetime import date, timedelta 
+nlafrom datetime import date, timedelta 
 import streamlit as st
 import matplotlib.pyplot as plt 
 import seaborn as sns 
@@ -178,7 +178,7 @@ for i in sState:
 
 for i, j in enumerate(bScore): 
   st.write("\nState:", selectedState[i]) 
-  st.write(j.nlarge(3, ["Score"])) 
+  st.write(j.nlargest(3, ["Score"])) 
   borutaPlot = sns.catplot(x = "Score", y = "Features", data = j, kind = "bar", height = 14, aspect = 1.9, palette = 'coolwarm') 
   plt.title("Boruta all features for " + selectedState[i]) 
   st.pyplot()
