@@ -1,7 +1,7 @@
-matplotlib
-seaborn
-pandas
-numpy
-Boruta
-scikit-learn
-streamlit
+matplotlib==3.4.2
+seaborn==3.4.2
+pandas==3.4.2
+numpy==3.4.2
+Boruta==3.4.2
+scikit-learn==3.4.2
+streamlit==3.4.2
